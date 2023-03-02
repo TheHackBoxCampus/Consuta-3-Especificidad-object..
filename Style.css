@@ -1,10 +1,18 @@
-#container .ul-container li{ /*Suma de poderes (0,1,1,1)*/
-    color: red;
-    font-size: 50px;
+img  {
+    display: block;
+    width: 30%;
+    height: 10em;
+    margin: 1em auto;
 }
+/* img.sin-object {
+    /*Si observamos la imagen, miramos que se deforma si no se le coloca la propiedad object-fit que precisamente es para ajustar la imagen
+} 
+*/
 
-div ul li {          /*Especficidad (0,0,3)---suma de poderes (0,0,0,3)*/
-    color: blue 
+img.con-object {
+    object-fit: cover; /*No se pierde calidad pero ocupa todo el espacio*/
+    /* object-fit: initial; */ /* Estado inicial*/
+    /* object-fit: scale-down; */ /*La imagen se hace un poco mas pequeña*/
+    /* object-fit: contain; */ /*Se ajusta a su contenido*/
+    /* object-fit: fill; */ /*El elemento se estira dependiendo del tamaño de su contenedor*/
 }
-/*Aqui la cascada no hace efecto por la especificidad, la suma de poderes, a
-menos que se utilice el abreviado "!important" dentro de los estilos*/
