@@ -1,18 +1,64 @@
-img  {
-    display: block;
-    width: 30%;
-    height: 10em;
-    margin: 1em auto;
+body {
+    background-color: rgb(17, 17, 74);
+    color: #fff; 
+    font-weight: bold;
 }
-/* img.sin-object {
-    /*Si observamos la imagen, miramos que se deforma si no se le coloca la propiedad object-fit que precisamente es para ajustar la imagen
-} 
-*/
 
-img.con-object {
-    object-fit: cover; /*No se pierde calidad pero ocupa todo el espacio*/
-    /* object-fit: initial; */ /* Estado inicial*/
-    /* object-fit: scale-down; */ /*La imagen se hace un poco mas pequeña*/
-    /* object-fit: contain; */ /*Se ajusta a su contenido*/
-    /* object-fit: fill; */ /*El elemento se estira dependiendo del tamaño de su contenedor*/
+.container {
+    width: 80%;
+    margin: 3em auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+
+}
+
+.card{
+    display: flex;
+    width: 40%;
+    background: #2e7bb6;
+    padding: 1em;
+    gap: 1em;
+}
+
+.card div {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+}
+
+.card div h1{
+    font-variant: small-caps;
+}
+
+/* MediaQueries
+Lo que nos permite acomodar nuestro sitio a los diferentes
+dispositivos que tenemos, desde un smartphone a un Desktop, escalando
+En tablets y demas dispositivos. */
+
+/*Max-width significa desde que llega a ese width hasta lo mas pequeño*/
+/*Min-width significa desde que llega a ese width hasta lo mas grande*/
+
+
+/* @media ( width >= PX; 
+            width <= PX; 
+            PX <= width <= PX ){}
+podemos organizarlos de diferentes maneras, dependiendo de la necesidad, se le 
+conocen como RANGOS*/
+
+
+@media (max-width: 1587px) {
+    .container {
+        flex-direction: column;
+    }
+    .card{
+        flex-direction: column;
+        width: 30em;
+    }
+
+    .card div p {
+        width: 80%;
+    }
 }
